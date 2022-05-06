@@ -36,38 +36,11 @@ public class JsonConversion {
             System.out.println("emp: " + emp.toString());
 
             return emp;
-            //textView1.setText(str);
 
-            /*var jObj = JsonObject.class; jObj.par
-            var name = jObj.get("user").getAsJsonObject();
-            String pwd = jObj.getString("Pwd");
-            String command = jObj.getString("Command");
-
-            JSONObject json = new JSONObject();
-            response.setContentType("application/json");
-            response.setHeader("Cache-Control", "nocache");
-            response.setCharacterEncoding("utf-8");
-            PrintWriter out = response.getWriter();
-            out.print(json.toString()); */
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
-
-   /* @Autowired
-    private JacksonTester<User> json;
-
-    public void testSerialize() throws Exception {
-        User details = new User("Honda", "Civic", "email");
-        this.json.write(details);
-    }
-
-    public void testDeserialize() throws Exception {
-        String content = "{\"make\":\"Ford\",\"model\":\"Focus\"}";
-        var h = this.json.parse(content);
-        var t = this.json.parseObject(content);
-    } */
-
 
 }

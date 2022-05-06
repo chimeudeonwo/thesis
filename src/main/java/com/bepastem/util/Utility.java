@@ -23,15 +23,11 @@ public class Utility {
         }
 
         if(authorization.toLowerCase().startsWith("basic")) {
-            // Authorization: Basic base64credentials
             String base64Credentials = authorization.substring("Basic".length()).trim();
             byte[] credDecoded = Base64.getDecoder().decode(base64Credentials);
             String credentials = new String(credDecoded, StandardCharsets.UTF_8);
-            // credentials = username:password
             final String[] values = credentials.split(":", 2);
 
-            //username = values[0];
-            //password = values[1];
             userCredentials[0] = values[0];
             userCredentials[1] = values[1];
         }

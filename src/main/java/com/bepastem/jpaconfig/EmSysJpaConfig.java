@@ -1,11 +1,8 @@
 package com.bepastem.jpaconfig;
 
-import org.hibernate.Session;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
@@ -49,22 +46,4 @@ public class EmSysJpaConfig {
         return properties;
     }
 
-    /*@Bean
-    public JavaMailSender getJavaMailSender() {
-        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-        //mailSender.setHost("smtp-mail.outlook.com");
-        mailSender.setHost("smtp.office365.com");
-        mailSender.setPort(587);
-
-        mailSender.setUsername("patrick.chimeudeonwo@haw-hamburg.de");
-        mailSender.setPassword("***********");
-
-        Properties props = mailSender.getJavaMailProperties();
-        props.put("mail.transport.protocol", "smtp");
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.debug", "true");
-
-        return mailSender;
-    }*/
 }
